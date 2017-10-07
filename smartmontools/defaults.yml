@@ -1,0 +1,12 @@
+# vim: ft=yaml
+# Defaults for smartmontools
+
+smartmontools:
+  enabled: false
+  pkg: smartmontools
+  service:
+    name: smartd
+    state: dead
+    enable: false
+  config:
+    devicescan: '-d removable -n standby -m root -M exec /usr/share/smartmontools/smartd-runner'
